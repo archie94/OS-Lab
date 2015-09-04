@@ -10,8 +10,13 @@ constrain is that every number written by some producer should be read exactly o
 of the consumers. Of course, a producer should not write when buffer is full and a consumer should
 not read when buffer is empty.
 
-Write a code that accepts value m and n and then forks m producers and n consumers.
-
+Write a code that first creates a shared circular buffer and shared variable SUM and accepts value 
+m and n and then forks m producers and n consumers.You can create any other shared variable if you need. 
+The producer and consumer codes can be written as a functions that are called by the child processes.
+After all the producers and consumers have finished(the consumer exits after all the data produced by 
+all the producers have been read. How does a consumer know this?), the parent process prints the value
+of the SUM. Note that correct value of SUM should be m*25*51. Test your code with atleast 
+(a)m=1,n=1 	(b)m=1,n=2	(c)m=2,n=1	(d)m=2,n=2
 */
 
 
