@@ -1,3 +1,7 @@
+/* Count the maximum number of
+processes that can run in
+your system */
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<sys/types.h>
